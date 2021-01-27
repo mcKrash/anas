@@ -2,21 +2,21 @@ const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 const mongoose = require('mongoose');
+const  cors = require('cors')
 
 const userRoutes = require('./routes/users'); 
 
-const app = express();
 const port = (process.env.PORT || 5000);
 
+const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 
-// app.use((req, res, next) => {
-//     res.setHeaders('Access-Control-Allow-Origin', '*');
-//     res.setHeaders('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT, PATCH');
-//     res.setHeaders('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//     next();
-// });
+app.get('/', function (req, res, next) {
+    res.json({msg: 'This is CORS-enabled for all origins!'})
+  });
+  
 
 const mongoUrl = 'mongodb+srv://proengan:proengan@cluster0.hsjtr.mongodb.net/test?retryWrites=true&w=majority&ssl=true';
 const mongooseOptions = {
