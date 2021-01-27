@@ -7,7 +7,7 @@ const { body } = require('express-validator');
 
 const userCotroller = require('../controllers/passengerController/userCtrl')
 
-
+app
 router.post('/register',[
     body('name').trim().isLength({min: 6}),
     body('phone').trim().isLength({min: 9, max: 14}),

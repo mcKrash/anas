@@ -13,10 +13,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-app.get('/', function (req, res, next) {
-    res.json({msg: 'This is CORS-enabled for all origins!'})
-    next();
-  });
+// app.get('/', function (req, res, next) {
+//     res.json({msg: 'This is CORS-enabled for all origins!'})
+//     next();
+//   });
   
 
 const mongoUrl = 'mongodb+srv://proengan:proengan@cluster0.hsjtr.mongodb.net/test?retryWrites=true&w=majority&ssl=true';
