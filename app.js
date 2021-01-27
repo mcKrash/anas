@@ -38,7 +38,7 @@ mongoose.connect(mongoUrl, mongooseOptions)
     // app.listen(8080); 
 }).catch(err => console.log(err));
 
-var port_number = server.listen(process.env.PORT || 3000);
+var port_number = serverlisten(process.env.PORT || 5000);
 app.listen(port_number);
 
 
