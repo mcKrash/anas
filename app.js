@@ -11,12 +11,12 @@ const port = (process.env.PORT || 3000);
 app.use(bodyParser.json());
 
 
-app.use((req, res, next) => {
-    res.setHeaders('Access-Control-Allow-Origin', '*');
-    res.setHeaders('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT, PATCH');
-    res.setHeaders('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-});
+// app.use((req, res, next) => {
+//     res.setHeaders('Access-Control-Allow-Origin', '*');
+//     res.setHeaders('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT, PATCH');
+//     res.setHeaders('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//     next();
+// });
 
 const mongoUrl = 'mongodb+srv://proengan:proengan@cluster0.hsjtr.mongodb.net/test?retryWrites=true&w=majority&ssl=true';
 const mongooseOptions = {
