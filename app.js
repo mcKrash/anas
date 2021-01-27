@@ -29,10 +29,16 @@ const mongooseOptions = {
 
 app.use('/api/users', userRoutes);
 
+
+
+
 mongoose.connect(mongoUrl, mongooseOptions)
 .then( () => {
     console.log('connected to database');
-    app.listen(8080); 
+    // app.listen(8080); 
 }).catch(err => console.log(err));
+
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
 
 
